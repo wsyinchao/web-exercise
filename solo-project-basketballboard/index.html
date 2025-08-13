@@ -1,0 +1,55 @@
+<html lang="en">
+
+<head>
+    <!-- 移动端适配 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 设置字符集 -->
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <!-- 语义不够清晰, 需要优化 -->
+    <!-- added by yinchao, Wed August 13 17:41	2025 -->
+    <div class="flex">
+        <!-- 垂直对齐占位符 -->
+        <div class="container">
+            <div class="side-part">
+                <h3>HOME</h3>
+                <div class="score-frame">
+                    <!-- 显示分数可以用 div 或者 span -->
+                    <div class="score" id="home-score">
+                        0
+                    </div>
+                </div>
+                <div class="add-score-btns">
+                    <!-- js 代码应该和 html 元素分离 -->
+                    <!-- added by yinchao, Wed August 13 17:41	2025 -->
+                    <button class="add-score-btn" onclick="addHomeScore(1)">+1</button>
+                    <button class="add-score-btn" onclick="addHomeScore(2)">+2</button>
+                    <button class="add-score-btn" onclick="addHomeScore(3)">+3</button>
+                </div>
+            </div>
+            <div class="side-part">
+                <h3>GUEST</h3>
+                <div class="score-frame">
+                    <!-- 显示分数可以用 div 或者 span -->
+                    <div class="score" id="guest-score">
+                        0
+                    </div>
+                </div>
+                <div class="add-score-btns">
+                    <button class="add-score-btn" onclick="addGuestScore(1)">+1</button>
+                    <button class="add-score-btn" onclick="addGuestScore(2)">+2</button>
+                    <button class="add-score-btn" onclick="addGuestScore(3)">+3</button>
+                </div>
+            </div>
+        </div>
+        <div>
+            <button id="reset-btn" onclick="reset()">RESET</button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
