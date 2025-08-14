@@ -1,0 +1,118 @@
+/**
+ * 字体还需要更深入的学习, 希望 scrimba 课程里面直接有
+ */
+@font-face {
+    font-family: "karla";
+    src: url("./fonts/Karla/Karla-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: "inter";
+    src: url("./fonts/Inter/Inter-VariableFont_opsz\,wght.ttf");
+}
+
+body {
+    margin: 0 auto;
+    font-family: "karla", sans-serif;
+    background-color: #1C1C1C;
+    color: white;
+}
+
+p,
+button {
+    font-family: 'inter', sans-serif;
+    margin: 0;
+    margin-left: 60px;
+}
+
+#title {
+    margin-top: 115px;
+    margin-left: 60px;
+    display: flex;
+    flex-direction: column;
+
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 40px;
+    color: #10B981;
+}
+
+h1 {
+    margin: 0;
+}
+
+#h1 {
+    color: white;
+}
+
+.des {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    margin-top: 10px;
+}
+
+#gen-btn {
+    margin-top: 50px;
+    background-color: #10B981;
+
+    width: 191px;
+    height: 42px;
+    opacity: 1;
+    border-radius: 6px;
+    padding-top: 9px;
+    padding-right: 17px;
+    padding-bottom: 9px;
+    padding-left: 15px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: white;
+
+    border: none;
+}
+
+#seperated-line {
+    border-color: #2F3E53;
+    margin: 35px 60px 35px 60px;
+}
+
+/**
+ * Margin Collapsing, 
+ * 不设置 border, 会导致 margin collapsing.
+ * <!-- added by yinchao, Thu August 14 15:52	2025 -->
+ * refer to https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing
+ */
+#container {
+    background-color: #1F2937;
+    width: 550px;
+    height: 550px;
+    margin: 0 auto;
+    border: 1px solid black;
+    margin-top: 115px;
+}
+
+#results {
+    display: flex;
+    justify-content: space-between;
+    width: 428px;
+    margin: 0 auto;
+}
+
+.result-plane {
+    width: 200px;
+    height: 39px;
+    top: 396px;
+    left: 52px;
+    border-radius: 6px;
+    background-color: #273549;
+
+    font-family: 'inter', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 32px;
+    text-align: center;
+    color: #55F991;
+    padding-top: 6px;
+}
