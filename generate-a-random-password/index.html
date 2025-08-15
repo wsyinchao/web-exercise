@@ -16,7 +16,24 @@
             <h1>random password</h1>
         </div>
         <p class="des">Never use an insecure password again</p>
-        <button id="gen-btn" onclick="generateKeys()">Generate passwords</button>
+        <div id="generate-option">
+            <!-- <button id="gen-btn" onclick="generateKeys()">Generate passwords</button> -->
+            <button id="gen-btn" onclick="generateKeysNoneScure()">Generate passwords</button>
+            <div>
+                <label for="only-number" id="checkbox-label">Only Number:</label>
+                <input type="checkbox" name="only-number" id="only-number">
+            </div>
+            <div>
+                <label for="password-length" id="password-length-label">Enter password length:</label>
+                <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/number -->
+                <input type="number" name="password-length" id="password-length" list="password-length-values" placeholder="number">
+                <datalist id="password-length-values">
+                    <option value="8"></option>
+                    <option value="16"></option>
+                    <option value="32"></option>
+                </datalist>
+            </div>
+        </div>
 
         <!-- A seperated line -->
         <hr id="seperated-line">

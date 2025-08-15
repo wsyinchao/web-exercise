@@ -40,9 +40,60 @@ function generateKeys() {
     pw2.textContent = key2Result.join('')
 }
 
+///
+
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min) + min)
+}
+
+function generateKeysNoneScure() {
+    const pw1 = document.getElementById('pw-1')
+    const pw2 = document.getElementById('pw-2')
+
+    const passwordLengthEl = document.getElementById('password-length')
+    let lengthOfPassword = parseInt(passwordLengthEl.value)
+    if (isNaN(lengthOfPassword)) {
+        lengthOfPassword = 8
+    }
+    if (lengthOfPassword > characters.length) {
+        lengthOfPassword = characters.length
+    }
+
+    const onlyNumberEl = document.getElementById('only-number')
+    const isOnlyNum = onlyNumberEl.checked
+    let [min, max] = [0, characters.length]
+    // 下面这种写法并不属于语法错误, 而是 min 为 undefined, max 为 [0, characters.length]
+    // 所以 google chrome devtools 并不报错
+    // let min, max = [0, characters.length]
+    if (isOnlyNum) {
+        [min, max] = [52, 62]
+    }
+
+    const key1 = []
+    const key2 = []
+    let n = lengthOfPassword
+    while (n--) {
+        key1.push(characters[getRandomInt(min, max)])
+        key2.push(characters[getRandomInt(min, max)])
+    }
+
+    pw1.textContent = key1.join('')
+    pw2.textContent = key2.join('')
+}
+
+function generateKeyUsingGenerateKey() {
+    // https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/generateKey
+    // generateKey 这个方法不是这么用的
+    // 使用示例如下: https://github.com/mdn/dom-examples/blob/main/web-crypto/sign-verify/hmac.js
+    // Fri August 15 10:59	2025
+    crypto.subtle.generateKey({ name: 'HMAC', hash: { name: 'SHA-512' } }, true, ['sign', 'verify']).then(key => {
+        console.log(key)
+    })
+}
+
 function copyToClipboard(id) {
     const tag = document.getElementById(id)
     navigator.clipboard.writeText(tag.textContent).then(() => {
-        alert("Have copied to clipboard");
+        alert(`The password "${tag.textContent}" Has copied to clipboard`);
     })
 }

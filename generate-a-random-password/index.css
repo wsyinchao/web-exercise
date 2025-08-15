@@ -22,7 +22,6 @@ p,
 button {
     font-family: 'inter', sans-serif;
     margin: 0;
-    margin-left: 60px;
 }
 
 #title {
@@ -50,10 +49,10 @@ h1 {
     font-size: 20px;
     line-height: 28px;
     margin-top: 10px;
+    margin-left: 60px;
 }
 
 #gen-btn {
-    margin-top: 50px;
     background-color: #10B981;
 
     width: 191px;
@@ -115,4 +114,35 @@ h1 {
     text-align: center;
     color: #55F991;
     padding-top: 6px;
+
+    /* https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Overflow */
+    overflow: hidden;
 }
+
+#checkbox-label {
+    font-family: 'inter', sans-serif;
+    /* font-weight: normal; */
+}
+
+#generate-option {
+    display: flex;
+    flex-direction: column;
+    margin-left: 60px;
+    margin-top: 50px;
+}
+
+#password-length {
+    width: 80px;
+}
+
+#only-number {
+    margin: 0;
+}
+
+#checkbox-label {
+    line-height: 35px;
+}
+
+/* #password-length-label {
+    line-height: 35px;
+} */
