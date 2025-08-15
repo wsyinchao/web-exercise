@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自动消失的消息提示</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        toast: {
+                            success: '#10B981',
+                            error: '#EF4444',
+                            info: '#3B82F6',
+                            warning: '#F59E0B'
+                        }
+                    },
+                    animation: {
+                        'toast-in': 'toastIn 0.3s ease-out',
+                        'toast-out': 'toastOut 0.3s ease-in'
+                    },
+                    keyframes: {
+                        toastIn: {
+                            '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        },
+                        toastOut: {
+                            '0%': { transform: 'translateY(0)', opacity: '1' },
+                            '100%': { transform: 'translateY(-20px)', opacity: '0' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-gray-100 min-h-screen p-8">
+    <h1 class="text-2xl font-bold text-center mb-8">自动消失的消息提示示例</h1>
+
+    <div class="flex flex-col items-center gap-4">
+        <button onclick="toast('这是一条普通消息')"
+            class="px-6 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">
+            显示普通消息
+        </button>
+
+        <button onclick="toast('操作成功！', 'success')"
+            class="px-6 py-2 bg-toast-success text-white rounded-lg hover:bg-toast-success/90 transition">
+            显示成功消息
+        </button>
+
+        <button onclick="toast('发生错误，请重试', 'error')"
+            class="px-6 py-2 bg-toast-error text-white rounded-lg hover:bg-toast-error/90 transition">
+            显示错误消息
+        </button>
+
+        <button onclick="toast('请注意这个提示', 'warning')"
+            class="px-6 py-2 bg-toast-warning text-white rounded-lg hover:bg-toast-warning/90 transition">
+            显示警告消息
+        </button>
+
+        <button onclick="toast('这是一条信息提示', 'info', 5000)"
+            class="px-6 py-2 bg-toast-info text-white rounded-lg hover:bg-toast-info/90 transition">
+            显示5秒后消失的信息
+        </button>
+    </div>
+
+    <script>
+        /**
+         * 显示自动消失的消息提示
+         * @param {string} message - 提示内容
+         * @param {string} type - 提示类型：success, error, warning, info (默认普通)
+         * @param {number} duration - 显示时长(毫秒)，默认3000ms
+         */
+        function toast(message, type = '', duration = 3000) {
+            // 创建toast元素
+            const toast = document.createElement('div');
+
+            // 设置基础样式
+            let baseClasses = 'fixed top-4 left-1/2 transform -translate-x-1/2 px-4 py-3 rounded-lg text-white shadow-lg z-50 animation-toast-in flex items-center gap-2';
+
+            // 根据类型设置不同样式
+            let icon = '';
+            switch (type) {
+                case 'success':
+                    baseClasses += ' bg-toast-success';
+                    icon = '<i class="fa fa-check-circle"></i>';
+                    break;
+                case 'error':
+                    baseClasses += ' bg-toast-error';
+                    icon = '<i class="fa fa-times-circle"></i>';
+                    break;
+                case 'warning':
+                    baseClasses += ' bg-toast-warning';
+                    icon = '<i class="fa fa-exclamation-triangle"></i>';
+                    break;
+                case 'info':
+                    baseClasses += ' bg-toast-info';
+                    icon = '<i class="fa fa-info-circle"></i>';
+                    break;
+                default:
+                    baseClasses += ' bg-gray-800';
+            }
+
+            toast.className = baseClasses;
+            toast.innerHTML = `${icon}${message}`;
+
+            // 添加到页面
+            document.body.appendChild(toast);
+            // document.body.append(toast)
+
+            // 自动移除
+            setTimeout(() => {
+                // 添加淡出动画
+                toast.classList.remove('animation-toast-in');
+                toast.classList.add('animation-toast-out');
+
+                // 动画结束后移除元素
+                setTimeout(() => {
+                    document.body.removeChild(toast);
+                }, 300);
+            }, duration);
+        }
+
+        // 页面加载后显示一个欢迎消息
+        window.onload = () => {
+            setTimeout(() => {
+                toast('欢迎使用自动消失提示功能！', 'info');
+            }, 500);
+        };
+    </script>
+</body>
+
+</html>
