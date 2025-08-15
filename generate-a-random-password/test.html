@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="md">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+
+    <style>
+        a {
+            /* inline elements can't be set width, height */
+            width: 100px;
+        }
+
+        button {
+            border: 1px lightblue;
+            border-top-style: none;
+            border-left-style: none;
+            border-right-style: outset;
+            border-bottom-style: outset;
+        }
+
+        button:active {
+            border-color: lightblue;
+            transform: scale(1.05);
+            transform: translate(1px, 1px);
+            border-top-style: outset;
+            border-left-style: outset;
+            border-right-style: none;
+            border-bottom-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="msgpack.club">click me </a>
+    <button>click me button</button>
+</body>
+
+</html>
