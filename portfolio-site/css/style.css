@@ -99,10 +99,20 @@ section {
     padding: 10px 25px;
     margin-top: 25px;
     border-radius: 5px;
+    cursor: pointer;
 }
+
+/* .btn:visited {
+    background-color: #780808;
+    color: #252525;
+} */
 
 .btn:hover,
 .btn:focus {
     background: #252525;
     color: #fff;
+}
+
+.btn:active {
+    box-shadow: 2px 2px 5px goldenrod;
 }
