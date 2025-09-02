@@ -30,18 +30,6 @@ p {
     line-height: 23px;
 }
 
-/* links */
-
-a {
-    color: #ef5839;
-    text-decoration: underline dotted;
-}
-
-a:hover,
-a:active {
-    color: #d4b44c;
-}
-
 /* 
 Challenge:
 1. Refactor the CSS for these button-style
