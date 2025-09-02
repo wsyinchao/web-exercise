@@ -10,6 +10,10 @@
         body {
             /* margin: 0, 10px; */
             margin: 0;
+            margin-top: 100px;
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
         }
 
         a {
@@ -18,22 +22,23 @@
         }
 
         button {
-            border: 1px lightblue;
-            border-top-style: none;
-            border-left-style: none;
-            border-right-style: outset;
-            border-bottom-style: outset;
+            margin-left: 10px;
+            
+            border: 2px black;
+
+            border-style: none outset outset none;
+
             background-color: beige;
+            font-weight: bold;
+            padding: 8px 16px;
+            border-radius: 5px;
         }
 
         button:active {
-            border-color: lightblue;
-            transform: scale(1.05);
-            transform: translate(1px, 1px);
-            border-top-style: outset;
-            border-left-style: outset;
-            border-right-style: none;
-            border-bottom-style: none;
+            border-color: black;
+
+            transform: scale(1.05) translate(1px, 1px);
+            border-style: outset none none outset;
         }
 
         #input {
@@ -41,6 +46,8 @@
             width: 100%;
             /* width: 100vw; */
             /* margin: 5px 10px; */
+            margin-top: 10px;
+            margin-bottom: 10px;
 
             padding: 2px 10px;
 
