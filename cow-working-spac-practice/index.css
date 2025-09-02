@@ -24,6 +24,13 @@ h1 {
     /* key insight 1 */
     /* key insight: https://stackoverflow.com/questions/33924655/position-last-flex-item-at-the-end-of-container*/
     margin-left: auto;
+
+    /* 这为什么没有视觉变化? */
+    /* 
+     * 这是因为 align-self 默认影响的是 across axis, is not main axis.
+     * And, there is no more space in across axis.
+     */
+    align-self: flex-end;
 }
 
 .item {
