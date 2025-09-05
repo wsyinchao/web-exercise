@@ -63,6 +63,17 @@ header {
     flex-direction: column;
     border: 1px solid #bcbcbc;
     border-radius: 5px;
+
+    /* Setting the max-height emotions radios */
+    /* /// */
+    /* If overflow-x is hidden, scroll, or auto and the overflow-y property is visible (default), 
+    the value will be implicitly computed as auto */
+    /* /// */
+    /* If overflow-y is hidden, scroll, or auto, and the overflow-x property is visible (default), 
+    the value will be implicitly computed as auto. */
+    max-height: 200px;
+    overflow-y: auto;
+    /* overflow-x: hidden; */
 }
 
 .radio {
