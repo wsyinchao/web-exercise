@@ -97,13 +97,15 @@ h1 {
     justify-content: space-between;
     width: 428px;
     margin: 0 auto;
+
+    position: relative;
 }
 
 .result-plane {
     width: 200px;
     height: 39px;
-    top: 396px;
-    left: 52px;
+    /* top: 396px;
+    left: 52px; */
     border-radius: 6px;
     background-color: #273549;
 
@@ -146,3 +148,40 @@ h1 {
 /* #password-length-label {
     line-height: 35px;
 } */
+
+.pop-up {
+    position: absolute;
+
+    /* border: 1px solid #10B981; */
+    width: 8rem;
+    height: 2rem;
+    background-color: #1F2937;
+    font-size: 1rem;
+    font-family: "karla";
+    border-radius: 4px;
+
+    /* padding: 8px, 16px; */
+    display: flex;
+    justify-content: center;
+    /* align-items applies to the container */
+    align-items: center;
+    /* refer to [.pop-up p], align-self applies to individual item */
+    /* align-self: center; */
+
+    /* top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* .pop-up p {
+    align-self: center;
+} */
+
+.display-none {
+    display: none;
+}

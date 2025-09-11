@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./index.css">
-    <script src="./index.js"></script>
+    <script src="./index.js" type="module"></script>
     <title>Random password generator</title>
 </head>
 
@@ -18,7 +18,7 @@
         <p class="des">Never use an insecure password again</p>
         <div id="generate-option">
             <!-- <button id="gen-btn" onclick="generateKeys()">Generate passwords</button> -->
-            <button id="gen-btn" onclick="generateKeysNoneScure()">Generate passwords</button>
+            <button id="gen-btn">Generate passwords</button>
             <div>
                 <label for="only-number" id="checkbox-label">Only Number:</label>
                 <input type="checkbox" name="only-number" id="only-number">
@@ -26,7 +26,8 @@
             <div>
                 <label for="password-length" id="password-length-label">Enter password length:</label>
                 <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/number -->
-                <input type="number" name="password-length" id="password-length" list="password-length-values" placeholder="number">
+                <input type="number" name="password-length" id="password-length" list="password-length-values"
+                    placeholder="number">
                 <datalist id="password-length-values">
                     <option value="8"></option>
                     <option value="16"></option>
@@ -39,14 +40,26 @@
         <hr id="seperated-line">
 
         <div id="results">
-            <div class="result-plane" id="pw-1" onclick="copyToClipboard('pw-1')">
+            <div class="result-plane" id="pw-1">
             </div>
-            <div class="result-plane" id="pw-2" onclick="copyToClipboard('pw-2')">
+            <div class="result-plane" id="pw-2">
+            </div>
+
+            <!-- pop up -->
+            <div class="pop-up display-none" id="pop-up">
+                <p>Copied!</p>
             </div>
         </div>
 
         <!-- bottom padding -->
     </div>
+
+    <!-- pop up -->
+    <!-- <div class="pop-up" id="pop-up">
+        <button class="pop-up-close-btn">⛔</button>
+        <div class="pop-up-content">
+        </div>
+    </div> -->
 </body>
 
 </html>
