@@ -1,0 +1,294 @@
+@font-face {
+    font-family: 'Smythe';
+    src: url('fonts/Smythe-Regular.ttf');
+    font-style: normal;
+    font-weight: 400;
+}
+
+:root {
+    font-family: 'Smythe', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    color: #FFFFFF;
+}
+
+.logo {
+    width: 600px;
+    margin: 0 auto;
+    display: block;
+}
+
+.card {
+    width: 508px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #D2D2D2;
+    padding-top: 67px;
+    padding-bottom: 50px;
+}
+
+.item-left {
+    display: flex;
+    align-items: center;
+    gap: 31px;
+}
+
+.item-image {
+    width: 70px;
+}
+
+.item-title,
+.item-ingredients,
+.item-price {
+    margin: 0;
+    font-weight: 400;
+}
+
+.item-title {
+    font-style: normal;
+    font-size: 1.75rem;
+    line-height: 0.6;
+}
+
+.item-ingredients {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.item-price {
+    font-size: 1.25rem;
+    line-height: 1.2;
+}
+
+.item-btn {
+    border: 1.5px solid #DEDEDE;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: 200;
+    color: #3C3C3C;
+}
+
+/* focus and hover appears at the same time,  */
+/* The hover effect will be stuck after clicking. */
+/* .item-btn:focus, */
+.item-btn:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.item-btn:focus-visible {
+    outline: 2px solid blue;
+}
+
+/* 
+    love fear hate: L V F H A
+    :link { ... }
+    :visited { ... }
+    :hover { ... }
+    :focus { ... }
+    :active { ... }
+ */
+.item-btn:active {
+    box-shadow: 1px 1px 5px goldenrod;
+}
+
+.footer {
+    margin-top: 25px;
+    height: 100px;
+    color: black;
+    background-color: pink;
+    font-size: 1.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .item-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
+
+.order {
+    width: 508px;
+    margin: 45px auto 0;
+    text-align: center;
+}
+
+.order-title {
+    font-size: 1.75rem;
+    font-weight: 400;
+    line-height: 1.05rem;
+    margin: 0;
+}
+
+.order-list {
+    margin-top: 60px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #393333;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #000000;
+    margin-top: 10px;
+}
+
+.order-item-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.order-item-name {
+    margin: 0;
+    font-size: 1.75rem;
+    line-height: 0.6;
+}
+
+.order-item-price {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+}
+
+.order-item-remove-btn {
+    background-color: #FFFFFF;
+    border: none;
+    color: #BBBBBB;
+    font-size: 0.75rem;
+    line-height: 2;
+    cursor: pointer;
+    padding-top: 2px;
+}
+
+.order-item-remove-btn:hover {
+    transform: scale(1.1);
+}
+
+.order-item-remove-btn:active {
+    text-shadow: 1px 1px 2px lightgreen;
+}
+
+.order-completed {
+    font-size: 2rem;
+    padding: 1em 2em;
+    color: #065F46;
+    background-color: #ECFDF5;
+    margin-bottom: 250px;
+}
+
+.total-price-div {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total-price-title {
+    margin: 0;
+    font-size: 1.75rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.total-price {
+    margin: 0;
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+.complete-order-btn {
+    margin-top: 50px;
+    border: none;
+    background-color: #16DB99;
+    color: #FFFFFF;
+    border-radius: 2px;
+    height: 60px;
+    width: 508px;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+/* love fear hate */
+
+.complete-order-btn:hover,
+.pop-up-btn:hover {
+    transform: scale(1.01);
+}
+
+.complete-order-btn:active,
+.pop-up-btn:active {
+    box-shadow: 3px 3px 5px goldenrod;
+}
+
+/* pop-up */
+.pop-up {
+    width: 524px;
+    height: 542px;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    box-shadow: 5px 5px 255px #00000080;
+    font-family: 'Courier New', Courier, monospace;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+
+    text-align: center;
+}
+
+.pop-up-title {
+    margin-top: 47px;
+    margin-bottom: 46px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.input-field {
+    width: 80%;
+    height: 73px;
+    color: #757575;
+    border: 1.3px solid #757575;
+    font-size: 1.25rem;
+    margin-bottom: 23px;
+    border-radius: 4px;
+    line-height: 1.5;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    box-sizing: border-box;
+}
+
+.pop-up-btn {
+    width: 80%;
+    height: 73px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: #FFFFFF;
+    background-color: #16DB99;
+}
+
+.display-none {
+    display: none;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="md">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant</title>
+
+    <link rel="stylesheet" href="index.css">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet"> -->
+
+</head>
+
+<body>
+    <header>
+        <img src="images/header.png" alt="logo" class="logo">
+    </header>
+
+    <main>
+        <section>
+            <!-- Why not using list here? -->
+            <div id="container">
+                <!-- items, rendered out by js -->
+                <!-- 
+                <div class="card">
+                    <div class="item-left">
+                        <img src="images/pizza.png" alt="An item image" class="item-image">
+                        <div class="item-detail">
+                            <h2 class="item-title">Pizza</h2>
+                            <p class="item-ingredients">pepperoni, mushroom, mozarella</p>
+                            <p class="item-price">$14</p>
+                        </div>
+                    </div>
+                    <button class="item-btn">+</button>
+                </div>
+                -->
+            </div>
+        </section>
+
+        <section>
+            <div class="order" id="check-out">
+                <!-- <div class="order-completed">
+                    Thanks, James! Your order is on its way!
+                </div> -->
+                <!-- <h2 class="order-title">Your Order</h2>
+                <div class="order-list">
+                    <div class="order-item">
+                        <div class="order-item-left">
+                            <p class="order-item-name">Pizza</p>
+                            <button class="order-item-remove-btn">remove</button>
+                        </div>
+                        <div class="order-item-price">$14</div>
+                    </div>
+                    <div class="order-item">
+                        <div class="order-item-left">
+                            <p class="order-item-name">Pizza</p>
+                            <button class="order-item-remove-btn">remove</button>
+                        </div>
+                        <div class="order-item-price">$14</div>
+                    </div>
+                </div>
+                <div class="total-price-div">
+                    <h3 class="total-price-title">Total Price</h3>
+                    <p class="total-price">$14</p>
+                </div>
+
+                <button class="complete-order-btn">
+                    Complete order
+                </button> -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+            @Personal Practice
+        </div>
+    </footer>
+
+    <div class="pop-up display-none" id="pop-up">
+        <h3 class="pop-up-title">Enter card details</h3>
+        <input type="text" name="name" id="name" class="input-field" placeholder="Enter your name" autocomplete="name"
+            required>
+        <input type="text" name="car-number" id="car-number" class="input-field" placeholder="Enter your number">
+        <input type="tel" name="cvv" id="cvv" class="input-field" placeholder="Enter CVV">
+        <button class="pop-up-btn" id="pop-up-btn">Pay</button>
+    </div>
+
+    <script type="module" src="index.js"></script>
+</body>
+
+</html>
