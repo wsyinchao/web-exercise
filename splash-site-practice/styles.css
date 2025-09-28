@@ -1,0 +1,174 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    /* The point of using varitables in CSS is that
+    we can simply redefine them for different platforms */
+    --header-bgcolor: #9480e4;
+    --header-color: #fff;
+    --header-font-size: 1.25rem;
+    --header-top-text-font-size: 0.875rem;
+    --header-top-text-padding-top: 0.25em;
+    --header-beta-text-font-size: 1rem;
+    --header-top-border-width: 5px;
+    --img-main-width: 120px;
+    --sub-heading-color: #575757;
+    --content-max-width: 450px;
+    --p-color: #404040;
+    --p-font-size: 1.125rem;
+
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+header,
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    color: var(--header-color);
+    background-color: var(--header-bgcolor);
+    background-image: url('images/intro-bg.png');
+    background-size: cover;
+    font-size: var(--header-font-size);
+    justify-content: space-between;
+    padding: 0 2em 1.5em;
+    text-align: center;
+    min-height: 250px;
+}
+
+h1 {
+    font-weight: normal;
+}
+
+.top-text,
+.beta-text,
+.subheading,
+.btn {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.top-text {
+    order: -1;
+    border-top: var(--header-top-border-width) solid var(--header-color);
+    font-size: var(--header-top-text-font-size);
+    padding-top: var(--header-top-text-padding-top);
+    color: var(--header-color);
+    margin: 0;
+}
+
+.beta-text {
+    font-size: var(--header-beta-text-font-size);
+}
+
+.main-content {
+    padding: 2.5em 2em 0em;
+}
+
+.img-main {
+    border-radius: 50%;
+    width: var(--img-main-width);
+}
+
+h2 {
+    font-size: 2.25rem;
+    margin: 0.166em 0;
+}
+
+.subheading {
+    font-size: 1rem;
+    color: var(--sub-heading-color);
+    margin: 0 0 0.5em;
+}
+
+p {
+    margin: 1em 0;
+    font-size: var(--p-font-size);
+    color: var(--p-color);
+    max-width: var(--content-max-width);
+    line-height: 1.35;
+}
+
+form {
+    max-width: var(--content-max-width);
+}
+
+input,
+.btn {
+    border-radius: 4px;
+}
+
+input {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 0.8em;
+    font-family: inherit;
+    border: 2px solid #d1d5db;
+}
+
+input:focus {
+    outline: none;
+    border-color: #8a71ec;
+}
+
+.btn {
+    width: 100%;
+    font-family: inherit;
+    border: none;
+}
+
+.btn-primary {
+    padding: 1em 0;
+    margin-top: 1em;
+    background-color: #8a71ec;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.fine-print {
+    color: #858585;
+    font-size: 0.75rem;
+    margin: 1em 0;
+    letter-spacing: 1px;
+}
+
+@media (min-width: 820px) {
+    :root {
+        --header-font-size: 1.5rem;
+        --header-top-text-font-size: 1rem;
+        --header-top-text-padding-top: 0.5em;
+        --header-beta-text-font-size: 1.25rem;
+        --header-top-border-width: 7px;
+        --img-main-width: 150px;
+        --p-font-size: 1.25rem;
+    }
+    
+    body {
+        display: flex;
+    }
+
+    .main-content,
+    header {
+        width: 50%;
+        height: 100vh;
+    }
+
+    .main-content {
+        justify-content: center;
+        padding-top: 0;
+    }
+}
