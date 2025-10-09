@@ -14,11 +14,14 @@
     text-align: center;
     font-size: 16px;
 
-    --p-f-z: 1rem;
     --footer-fz: 0.75rem;
     --header-h-fz: 0.847rem;
     --header-link-fz: 0.75rem;
     --header-img-width: 23.16px;
+}
+
+body {
+    max-width: 1024px;
 }
 
 html,
@@ -118,7 +121,7 @@ footer p {
     /* background-image: url('../images/article-img-hero.png'); */
     /* start searching from the root path of current project. */
     background-image: url('/images/article-img-hero.png');
-    background-size: contain;
+    background-size: cover;
     background-color: rgb(0, 0, 0, 0.75);
     background-blend-mode: multiply;
 
@@ -136,7 +139,7 @@ footer p {
     justify-content: space-between;
 
     color: #FFFFFF;
-    height: 85%;
+    height: 258px;
     padding: 1em;
 }
 
@@ -163,12 +166,15 @@ footer p {
     display: grid;
     grid-template-columns: 1em 1fr 1em;
     grid-template-areas:
-        ". ..... ."
-        ". ..... ."
-        ". post1 ."
-        ". post2 ."
-        ". post3 ."
-        ". ..... ."
+        '. ..... .'
+        '. ..... .'
+        '. post1 .'
+        '. post2 .'
+        '. post3 .'
+        '. post4 .'
+        '. post5 .'
+        '. post6 .'
+        '. ..... .'
     ;
     gap: 1em 0;
 }
@@ -183,6 +189,18 @@ footer p {
 
 .post-3 {
     grid-area: post3;
+}
+
+.post-4 {
+    grid-area: post4;
+}
+
+.post-5 {
+    grid-area: post5;
+}
+
+.post-6 {
+    grid-area: post6;
 }
 
 .post-img {
@@ -231,4 +249,59 @@ footer p {
     color: #000000;
     text-decoration: underline;
     cursor: pointer;
+}
+
+@media (min-width: 670px) {
+    :root {
+        --footer-fz: 1rem;
+        --header-h-fz: 1.25rem;
+        --header-link-fz: 1rem;
+        --header-img-width: 32.25px;
+    }
+
+    .hero-content {
+        height: 60%;
+        padding: 2em;
+    }
+
+    .hero-post-time {
+        font-size: 1rem;
+    }
+
+    .hero-post-title {
+        font-size: 2.25rem;
+    }
+
+    .hero-post-abstract {
+        font-size: 1.25rem;
+    }
+
+    .section-two-container {
+        grid-template-columns: 0 1fr 1fr 1fr 0;
+        grid-template-areas:
+            '. ..... ..... ..... .'
+            '. ..... ..... ..... .'
+            '. post1 post2 post3 .'
+            '. post4 post5 post6 .'
+        ;
+        gap: 1em;
+    }
+
+    .post-time {
+        font-size: 1.25rem;
+        margin: 0.5em 0;
+    }
+
+    .post-title {
+        font-size: 1.75rem;
+    }
+
+    .view-more {
+        font-size: 1.25rem;
+    }
+
+    .post-abstract {
+        font-size: 1.25rem;
+        margin: 0.5em 0;
+    }
 }
