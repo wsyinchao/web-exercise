@@ -1,0 +1,195 @@
+@font-face {
+    font-family: 'Karla';
+    src: url('/fonts/Karla-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'innovative';
+    src: url('/fonts/Bungee_Spice/BungeeSpice-Regular.ttf');
+    /* The lack of `font-weight` means
+    appling all font-weights that was included in the font style file.  */
+    /* font-weight: 400; */
+}
+
+body {
+    margin: 0;
+    background-color: antiquewhite;
+    font-family: 'Karla', sans-serif;
+
+    min-width: 570px;
+}
+
+header,
+main {
+    max-width: 678px;
+    margin: auto;
+}
+
+header {
+    font-family: 'innovative', sans-serif;
+    text-transform: uppercase;
+    background-color: lightgreen;
+    text-align: center;
+    padding: 0.5em 1em;
+    font-size: 2.5rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+
+.section-form {
+    margin-top: 7em;
+}
+
+form {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+}
+
+.color-wrapper {
+    width: 3em;
+    height: 3em;
+    /* Should be reset in JavaScript */
+    background-color: black;
+    border-radius: 50%;
+}
+
+input[type="color"] {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+input[type="submit"],
+select {
+    font-family: 'Karla', sans-serif;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    background-color: lightgreen;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+}
+
+input[type="submit"] {
+    text-transform: uppercase;
+}
+
+select {
+    text-transform: capitalize;
+}
+
+input[type="submit"]:hover,
+select:hover {
+    box-shadow: 2px 2px 5px goldenrod;
+}
+
+input[type="submit"]:active,
+select:active {
+    border-top: 2px inset lightpink;
+    border-left: 2px inset lightpink;
+}
+
+ul,
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+.scheme-list {
+    display: grid;
+    grid-template-columns: 0 repeat(5, 1fr) 0;
+    grid-template-areas:
+        '. . . . . . .'
+        '. . . . . . .'
+        '. scheme1 scheme2 scheme3 scheme4 scheme5 .'
+        '. . . . . . .'
+    ;
+    gap: 1em;
+}
+
+.scheme-1 {
+    grid-area: scheme1;
+}
+
+.scheme-1 .scheme-color {
+    background-color: #808080;
+}
+
+.scheme-2 {
+    grid-area: scheme2;
+}
+
+.scheme-2 .scheme-color {
+    background-color: #9A9898;
+}
+
+.scheme-3 {
+    grid-area: scheme3;
+}
+
+.scheme-3 .scheme-color {
+    background-color: #B4B1B1;
+}
+
+.scheme-4 {
+    grid-area: scheme4;
+}
+
+.scheme-4 .scheme-color {
+    background-color: #CECACA;
+}
+
+.scheme-5 {
+    grid-area: scheme5;
+}
+
+.scheme-5 .scheme-color {
+    background-color: #E7E4E4;
+}
+
+.scheme-li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    cursor: pointer;
+}
+
+.scheme-color {
+    width: 100%;
+    height: 50vmin;
+    background-color: red;
+    border-radius: 10px;
+}
+
+.message-box {
+    background-color: rgb(246, 225, 185);
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    font-size: 1.125rem;
+
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+}
+
+.display-none {
+    display: none;
+}

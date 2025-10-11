@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="md">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Scheme Generator</title>
+
+    <link rel="stylesheet" href="/index.css">
+</head>
+
+<body>
+    <header>
+        Color scheme picker
+    </header>
+
+    <main>
+        <section class="section-form">
+            <form>
+                <div class="color-wrapper" id="color-wrapper">
+                    <!-- You can refer to this website -->
+                    <!-- https://userway.org/contrast/?fg=000000&bg=90ee90 -->
+                    <input type="color" name="color-picker" id="color-picker">
+                </div>
+                <select name="scheme-mode" id="scheme-mode">
+                    <option value="monochrome">monochrome</option>
+                    <option value="monochrome-dark">monochrome-dark</option>
+                    <option value="monochrome-light">monochrome-light</option>
+                    <option value="analogic">analogic</option>
+                    <option value="complement">complement</option>
+                    <option value="analogic-complement">analogic-complement</option>
+                    <option value="triad">triad</option>
+                    <option value="quad">quad</option>
+                </select>
+                <input type="submit" value="Get color scheme">
+            </form>
+        </section>
+
+        <section class="section-scheme" id="section-scheme">
+            <!-- render from JS code -->
+            <ul class="scheme-list" id="scheme-list">
+                <li class="scheme-li scheme-1">
+                    <div class="scheme-color"></div>
+                    <p class="scheme-hex">#808080</p>
+                </li>
+                <li class="scheme-li scheme-2">
+                    <div class="scheme-color"></div>
+                    <p class="scheme-hex">#9A9898</p>
+                </li>
+                <li class="scheme-li scheme-3">
+                    <div class="scheme-color"></div>
+                    <p class="scheme-hex">#B4B1B1</p>
+                </li>
+                <li class="scheme-li scheme-4">
+                    <div class="scheme-color"></div>
+                    <p class="scheme-hex">#CECACA</p>
+                </li>
+                <li class="scheme-li scheme-5">
+                    <div class="scheme-color"></div>
+                    <p class="scheme-hex">#E7E4E4</p>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <div class="message-box display-none" id="message-box">
+        Has copied to your clipbord!
+    </div>
+
+    <script type="module" src="/index.js"></script>
+</body>
+
+</html>
