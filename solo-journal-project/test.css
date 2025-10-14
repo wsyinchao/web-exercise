@@ -1,0 +1,36 @@
+/* 
+    it's => it is...
+
+    1. An element's size will not grow with its content if you've already set it.
+ */
+
+:root {
+    --golden-ratio: 1.618 / 1;
+}
+ 
+html {
+    background-color: palevioletred;
+}
+
+.img-container {
+    width: 500px;
+    margin: auto;
+    aspect-ratio: var(--golden-ratio);
+    border: 1px solid black;
+    overflow: hidden;
+
+    position: relative;
+}
+
+.img-container img {
+    min-height: 100%;
+
+    width: 100%;
+    /* The value auto is the default value of the height property in CSS */
+    /* height: auto; */
+
+    position: absolute;
+    left: 0;
+    /* be revised in JS*/
+    top: 0;
+}
