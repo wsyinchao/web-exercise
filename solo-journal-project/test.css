@@ -9,7 +9,9 @@
 }
  
 html {
-    background-color: palevioletred;
+    /* background-color: palevioletred; */
+    background: url('/images/post-img-6.png') no-repeat center fixed;
+    background-size: cover;
 }
 
 .img-container {
