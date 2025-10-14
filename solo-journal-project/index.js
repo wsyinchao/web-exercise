@@ -17,3 +17,17 @@ document.addEventListener('click', e => {
         location.href = '/post.html'
     }
 })
+
+function reviseAllPostImg() {
+    const imgContainers = document.getElementsByClassName('post-img-container')
+    for (let i = 0; i < imgContainers.length; i++) {
+        const container = imgContainers.item(i)
+        const img = container.firstElementChild
+        const imgHeight = img.height
+        const containerHeight = getComputedStyle(container).height
+
+        img.style.top = `-${(imgHeight - parseFloat(containerHeight.slice(0, -2))) / 2}px`
+    }
+}
+
+reviseAllPostImg()
