@@ -1,0 +1,133 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: lightblue;
+}
+
+header {
+    color: whitesmoke;
+    text-align: center;
+    margin-top: 2em;
+}
+
+header h1 {
+    text-shadow: 2px 2px 5px black;
+    font-size: 1rem;
+}
+
+header p {
+    font-size: 3rem;
+    margin-top: 0.5em;
+}
+
+ul {
+    list-style: none;
+    color: rgb(36, 34, 34);
+
+    display: grid;
+    grid-template-columns: 0 repeat(3, 1fr) 0;
+    grid-template-areas:
+        '. .... .... .... .'
+        '. .... .... .... .'
+        '. crd1 crd2 crd3 .'
+        '. crd4 crd5 crd6 .'
+        '. crd7 .... .... .'
+        '. .... .... .... .'
+        '. .... .... .... .'
+    ;
+    gap: 1em;
+}
+
+li:focus {
+    background-color: aquamarine;
+}
+
+section {
+    margin-top: 2em;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding-bottom: 2em;
+}
+
+.card {
+    background-color: pink;
+    column-rule-color: lightgray;
+    text-align: center;
+    padding: 1em;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.card.selected {
+    background-color: #ADD8E6;
+    color: #FFFFFF;
+}
+
+span {
+    display: block;
+    font-size: 0.725rem;
+}
+
+.card1 {
+    grid-area: crd1;
+}
+
+.card2 {
+    grid-area: crd2;
+}
+
+.card3 {
+    grid-area: crd3;
+}
+
+.card4 {
+    grid-area: crd4;
+}
+
+.card5 {
+    grid-area: crd5;
+}
+
+.card6 {
+    grid-area: crd6;
+}
+
+.card7 {
+    grid-area: crd7;
+}
+
+section p {
+    padding-left: 1em;
+    margin-bottom: 0.5em;
+}
+
+.accent {
+    font-weight: bolder;
+}
+
+button {
+    border: none;
+    outline: none;
+    background-color: lightblue;
+    width: 98%;
+    margin: 6em auto 1em;
+    color: white;
+    font-size: 1.25rem;
+    text-shadow: 1px 1px 2px black;
+    border-radius: 9999px;
+    padding: 1em 1em;
+    display: block;
+}
