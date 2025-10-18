@@ -4,9 +4,16 @@ const btn = document.querySelector('button')
 
 ulE.addEventListener('click', e => {
     let ele = null
+    // if (e.target.classList.contains('card')) {
+    //     ele = e.target
+    // } else if (e.target.closest('.card')?.classList?.contains('card')) {
+    //     ele = e.target.closest('.card')
+    // }
+
+    // more efficient
     if (e.target.classList.contains('card')) {
         ele = e.target
-    } else if (e.target.closest('.card')?.classList?.contains('card')) {
+    } else if (e.target.tagName === 'SPAN') {
         ele = e.target.closest('.card')
     }
 
