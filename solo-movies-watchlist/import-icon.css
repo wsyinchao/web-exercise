@@ -1,0 +1,15 @@
+body {
+    text-align: center;
+}
+
+h1::before {
+    content: '\f002';
+}
+
+h1::after {
+    content: '';
+}
+
+.icon-img img {
+    width: 10vmin;
+}

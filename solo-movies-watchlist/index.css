@@ -1,0 +1,304 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('/fonts/Inter/Inter-VariableFont_opsz\,wght.ttf');
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: 'Inter', sans-serif;
+
+    /* variables */
+    --content-width: 550px;
+    --small-fz: 0.725rem;
+    --medium-fz: 0.875rem;
+
+    --h1-fz: 2.674rem;
+    --h1-line-height: 0.555;
+    --h1-font-weight: 800;
+
+    --nav-fz: var(--medium-fz);
+    --nav-font-height: 1.428;
+    --nav-font-weight: 700;
+    --nav-aspect-ratio-h2w: 208 / 550;
+
+    --search-box-width: 462px;
+    --search-box-aspect-ratio-h2w: 38 / 462;
+    --search-box-font-weight: 500;
+
+    --color: white;
+    --color2: #A5A5A5;
+    --border-color: #2C2C2C;
+    --bg-color: #1C1C1C;
+    --section-bg-color: #121212;
+    --search-btn-bg-color: #4B4B4B;
+    --search-box-bg-color: #2E2E2F;
+    --footer-bg-color: var(--search-box-bg-color);
+
+    --border-radius: 6px;
+    --border-width: 1.5px;
+
+    --poster-width: 99px;
+    --poster-aspect-ratio-h2w: 147.41 / 99;
+
+    color: var(--color);
+    background-color: var(--bg-color);
+}
+
+.dark-modle {
+    --color: #1C1C1C;
+    --bg-color: white;
+}
+
+body,
+h1,
+h2,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: var(--h1-fz);
+    line-height: var(--h1-line-height);
+    font-weight: var(--h1-font-weight);
+    padding-left: 1em;
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+    font-size: var(--nav-fz);
+    font-weight: var(--nav-font-weight);
+    line-height: var(--nav-font-height);
+    padding-right: 3.286em;
+}
+
+header,
+section {
+    width: var(--content-width);
+    margin: auto;
+}
+
+header {
+    position: relative;
+}
+
+section {
+    background-color: var(--section-bg-color);
+}
+
+nav {
+    height: calc(var(--content-width) * var(--nav-aspect-ratio-h2w));
+    background-image: url('/images/header-img.png');
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+form {
+    /* revise: means to review and make improvements */
+    /* It's common in academic, editional and professional contexts. */
+
+    --self-height: calc(var(--search-box-width) * var(--search-box-aspect-ratio-h2w));
+    --header-height: calc(var(--content-width) * var(--nav-aspect-ratio-h2w));
+
+    display: flex;
+    align-items: stretch;
+
+    width: var(--search-box-width);
+    height: var(--self-height);
+
+    position: absolute;
+    top: calc(var(--header-height) - var(--self-height) / 2);
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+form input {
+    border: none;
+    outline: none;
+    font-family: inherit;
+    font-weight: var(--search-box-font-weight);
+}
+
+.search-container {
+    display: flex;
+    background-color: var(--search-box-bg-color);
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+    width: 78%;
+}
+
+.search-fa {
+    align-self: center;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.search-text {
+    background-color: inherit;
+    padding: 0.5em 1em;
+    color: var(--color2);
+    font-size: var(--medium-fz);
+    line-height: 1.43;
+    /* The parent element is set to `display: flex`
+        and the left element is set a fixed width, 
+        so the another right element can be set to 100%.
+     */
+    width: 100%;
+}
+
+.search-btn {
+    width: 22%;
+    background-color: var(--search-btn-bg-color);
+    color: inherit;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+.search-btn:hover {
+    text-shadow: 1px 1px 2px #FEC654;
+    cursor: pointer;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 70px;
+}
+
+.tip {
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: #2E2E2F;
+}
+
+
+ul {
+    list-style: none;
+    padding-top: calc(2em + var(--search-box-width) * var(--search-box-aspect-ratio-h2w) / 2);
+}
+
+li,
+.title-container,
+.detail {
+    display: flex;
+    align-items: center;
+}
+
+li {
+    width: 84%;
+    margin: auto;
+    gap: 1em;
+    border-bottom: var(--border-width) solid var(--border-color);
+    padding-top: 1.54em;
+    padding-bottom: 1.54em;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+.poster {
+    width: var(--poster-width);
+    height: calc(var(--poster-width) * var(--poster-aspect-ratio-h2w));
+}
+
+.title-container {
+    align-items: end;
+}
+
+.title {
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.rating {
+    font-size: var(--small-fz);
+    font-weight: 400;
+    line-height: 1.667;
+}
+
+.star-fa {
+    padding-right: 1.5em;
+    color: #FEC654;
+}
+
+.movie-item-right {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.detail {
+    gap: 1em;
+    font-size: var(--small-fz);
+    font-weight: 400;
+    line-height: 1.667;
+}
+
+.detail button {
+    border: none;
+    outline: none;
+    font-family: inherit;
+    background-color: inherit;
+    color: inherit;
+    padding: 0;
+    cursor: pointer;
+}
+
+.detail button:hover {
+    transform: scale(1.1);
+}
+
+/* Failed to add an icon from Font Awesome using CSS */
+/* .detail button::before {
+    content: '\f055';
+} */
+
+.circle-plus {
+    padding-right: 0.5em;
+}
+
+.title-container {
+    gap: 1em;
+}
+
+.plot {
+    font-size: var(--medium-fz);
+    line-height: 1.429;
+    color: var(--color2);
+
+    /* How can you truncate a paragraph that is too long. */
+    /* height: 100px; */
+    /* width: 347px; */
+    /* white-space: nowrap; */
+    /* overflow: hidden; */
+    /* text-overflow: ellipsis; */
+
+    /* If you have multiple lines, the truncation should be done in JavaScript. */
+    /* Refer to the truncateText method in index.js file. */
+}
+
+footer {
+    font-size: var(--small-fz);
+    width: var(--content-width);
+    margin: auto;
+    color: var(--color2);
+    background-color: var(--footer-bg-color);
+    text-align: center;
+    padding: 1.5em 0;
+}

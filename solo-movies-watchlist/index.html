@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="md">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Watch List</title>
+    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1>
+                Find your film
+            </h1>
+            <a href="/watch-list.html">My Watch List</a>
+        </nav>
+
+        <form>
+            <div class="search-container">
+                <i class="fa-solid fa-magnifying-glass search-fa"></i>
+                <input type="text" name="search-text" class="search-text" placeholder="Search something...">
+            </div>
+            <input type="submit" value="Search" class="search-btn">
+        </form>
+    </header>
+
+    <section>
+        <!-- <div class="container" id="container">
+            <img src="/images/film-icon.png" alt="">
+            <p class="tip">Start Exploring</p>
+        </div> -->
+        <ul>
+            <li>
+                <img src="/images/poster-placeholder.jpg" alt="" class="poster" id="poster">
+                <div class="movie-item-right">
+                    <div class="title-container">
+                        <h2 class="title">Blade Runner</h2>
+                        <!-- :before, A star -->
+                        <p class="rating"><i class="fa-solid fa-star star-fa"></i>8.1</p>
+                    </div>
+                    <div class="detail">
+                        <p class="runtime">116 min</p>
+                        <p class="genre">Action, Drama, Mystery</p>
+                        <!-- :before, A plus symbol -->
+                        <button><i class="fa-solid fa-circle-plus circle-plus"></i>Watchlist</button>
+                    </div>
+                    <p class="plot" id="plot-truncate-text">A thief who steals corporate secrets through the use of
+                        dream-sharing technology is
+                        given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may
+                        given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may
+                        given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may
+                        given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may
+                        given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may
+                        given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may
+                        doom
+                        the project and his team to disaster.</p>
+                </div>
+            </li>
+            <li>
+                <img src="/images/poster-placeholder.jpg" alt="" class="poster" id="poster">
+                <div class="movie-item-right">
+                    <div class="title-container">
+                        <h2 class="title">Blade Runner</h2>
+                        <!-- :before, A star -->
+                        <p class="rating"><i class="fa-solid fa-star star-fa"></i>8.1</p>
+                    </div>
+                    <div class="detail">
+                        <p class="runtime">116 min</p>
+                        <p class="genre">Action, Drama, Mystery</p>
+                        <!-- :before, A plus symbol -->
+                        <button><i class="fa-solid fa-circle-plus circle-plus"></i>Watchlist</button>
+                    </div>
+                    <p class="plot">A thief who steals corporate secrets through the use of dream-sharing technology is
+                        given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may
+                        doom
+                        the project and his team to disaster.</p>
+                </div>
+            </li>
+            <li>
+                <img src="/images/poster-placeholder.jpg" alt="" class="poster" id="poster">
+                <div class="movie-item-right">
+                    <div class="title-container">
+                        <h2 class="title">Blade Runner</h2>
+                        <!-- :before, A star -->
+                        <p class="rating"><i class="fa-solid fa-star star-fa"></i>8.1</p>
+                    </div>
+                    <div class="detail">
+                        <p class="runtime">116 min</p>
+                        <p class="genre">Action, Drama, Mystery</p>
+                        <!-- :before, A plus symbol -->
+                        <button><i class="fa-solid fa-circle-plus circle-plus"></i>Watchlist</button>
+                    </div>
+                    <p class="plot">A thief who steals corporate secrets through the use of dream-sharing technology is
+                        given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may
+                        doom
+                        the project and his team to disaster.</p>
+                </div>
+            </li>
+            <li>
+                <img src="/images/poster-placeholder.jpg" alt="" class="poster" id="poster">
+                <div class="movie-item-right">
+                    <div class="title-container">
+                        <h2 class="title">Blade Runner</h2>
+                        <!-- :before, A star -->
+                        <p class="rating"><i class="fa-solid fa-star star-fa"></i>8.1</p>
+                    </div>
+                    <div class="detail">
+                        <p class="runtime">116 min</p>
+                        <p class="genre">Action, Drama, Mystery</p>
+                        <!-- :before, A plus symbol -->
+                        <button><i class="fa-solid fa-circle-plus circle-plus"></i>Watchlist</button>
+                    </div>
+                    <p class="plot">A thief who steals corporate secrets through the use of dream-sharing technology is
+                        given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may
+                        doom
+                        the project and his team to disaster.</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>@Solo Project, Whatch Movies</p>
+    </footer>
+
+    <script type="module" src="/index.js"></script>
+</body>
+
+</html>
