@@ -1,0 +1,452 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+    letter-spacing: 1px;
+}
+
+body {
+    margin: 0;
+    background: #ffffff;
+}
+
+/* header */
+
+header {
+    margin: 1em;
+    padding-right: 1em;
+    display: flex;
+    justify-content: left;
+    gap: 1em;
+    /* position: relative; */
+}
+
+/* header::before {
+    position: absolute;
+    content: '';
+    width: 80%;
+    height: 1px;
+    background-color: #0084FF;
+    display: block;
+    bottom: 0;
+} */
+
+header h1,
+header p {
+    margin: 0;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: .1em;
+}
+
+header p {
+    color: #3e4449;
+}
+
+header img {
+    width: 130px;
+}
+
+.header-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header button {
+    font-family: sans-serif;
+    font-size: 1.1rem;
+    background-color: #0084FF;
+    color: whitesmoke;
+    font-weight: 600;
+    border: none;
+    border-radius: 9999px;
+    padding: .3em;
+    width: 100px;
+    cursor: pointer;
+}
+
+header button:active {
+    transform: scale(1.1);
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* main, section 1 */
+.section-1 ul {
+    margin-left: 1em;
+    margin-top: 2em;
+    padding: 1em;
+    display: flex;
+    gap: 2em;
+    border-bottom: 1px solid lightgray;
+    border-top: 1px solid lightgray;
+    overflow: auto;
+    color: #3e4449;
+    /* overscroll-behavior-x: contain; */
+}
+
+.section-1 ul p {
+    margin: 0;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.section-1 ul li {
+    position: relative;
+    padding-right: 2em;
+}
+
+.section-1 ul li:not(:last-child)::after {
+    position: absolute;
+    content: '';
+    background-color: lightgray;
+    height: 50%;
+    width: 2px;
+    top: 25%;
+    right: 0;
+}
+
+.section-1 ul .title {
+    font-size: .725rem;
+}
+
+.section-1 ul .content {
+    margin: .7em 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.section-1 ul .bottom {
+    font-size: 1rem;
+}
+
+/* main section 2 */
+.section-2 ul {
+    margin: 1em 1em 0 1em;
+    padding: .5em .5em 1.5em 0em;
+    display: flex;
+    gap: 1em;
+    overflow: auto;
+    border-bottom: 1px solid lightgray;
+}
+
+.section-2 h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 1.5em 0 0em 1rem;
+}
+
+.section-2 img {
+    height: 70vh;
+    border: 2px solid lightgray;
+    border-radius: 1em;
+}
+
+/* main section 3 */
+.section-3 h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 1em 0 0em 1rem;
+}
+
+.section-3 .text {
+    white-space: pre-line;
+    overflow: hidden;
+    line-height: 1.7;
+    letter-spacing: 1px;
+    padding: 0 1em;
+    font-size: 1rem;
+    /* The row number times line-height */
+    height: 5.1em;
+    transition: height 1s ease;
+}
+
+.section-3 {
+    position: relative;
+}
+
+.section-3 button {
+    position: absolute;
+    right: 1.3em;
+    /* mobile first */
+    bottom: .35em;
+    /* bottom: 0; */
+
+    border: none;
+    font-size: 1rem;
+    color: #0084FF;
+    padding-left: 2em;
+
+    background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, .3));
+}
+
+/* main section 4 */
+.section-4 {
+    padding: 0 1em;
+}
+
+.section-4 .title,
+.section-4 .version,
+.section-4 .description {
+    margin: 0;
+}
+
+.section-4 .title {
+    margin-top: .5em;
+    position: relative;
+    display: inline-block;
+}
+
+.section-4 .after-style-1::after {
+    position: absolute;
+    content: '＞';
+    display: inline-block;
+    margin-left: .2em;
+}
+
+.section-4 .after-style-2::after {
+    position: absolute;
+    content: '∨';
+    display: inline-block;
+    margin-left: .2em;
+}
+
+.recent-update {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em 0;
+}
+
+.section-4 .description {
+    white-space: pre-line;
+    line-height: 2;
+}
+
+.section-4 li {
+    position: relative;
+    padding-bottom: .5em;
+}
+
+.section-4 li:not(:last-child)::after {
+    position: absolute;
+    content: '';
+    left: 5%;
+    bottom: 0;
+    width: 90%;
+    height: .05em;
+    background: lightgray;
+}
+
+/* main section 5 */
+.section-5 {
+    padding: 0 1em;
+}
+
+.section-5 p {
+    margin: 0;
+}
+
+.section-5 .header {
+    font-size: 1.5rem;
+    position: relative;
+    margin: 1em 0;
+}
+
+.section-5 .header::after {
+    position: absolute;
+    content: '＞';
+    margin-left: .3em;
+}
+
+.section-5 .rate-avg-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.section-5 .rate-avg {
+    font-size: 3rem;
+    margin: 0;
+    font-weight: 700;
+}
+
+.section-5 .rate-total {
+    font-size: .75rem;
+}
+
+.section-5 .rate-avg-icon {
+    font-size: 2rem;
+}
+
+.section-5 .best-help-rate {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 1em 0;
+}
+
+.section-5 ul {
+    display: flex;
+    gap: 1em;
+    overflow: auto;
+    margin-bottom: 2em;
+}
+
+.section-5 .card {
+    flex-shrink: 0;
+    border-radius: 20px;
+    width: 85vw;
+    height: 30vh;
+    padding: 1em;
+    margin-bottom: 1em;
+    border: 1px solid lightgray;
+    box-shadow: 2px 2px 10px lightgray;
+    line-height: 1.5;
+    color: #3e4449;
+}
+
+.section-5 .card .title {
+    white-space: nowrap;
+    font-weight: 600;
+    color: #1c1c1c;
+    font-size: 1.125rem;
+    margin-bottom: .5em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.section-5 .card .meta-data {
+    display: flex;
+    gap: .5em;
+    margin: .5em 0;
+}
+
+.section-5 .commenter {
+    position: relative;
+    padding-left: .5em;
+}
+
+.section-5 .commenter::before {
+    position: absolute;
+    content: '';
+    height: .15em;
+    width: .15em;
+    border-radius: 50%;
+    background: #3e4449;
+    left: 0;
+    bottom: 40%;
+}
+
+/* footer */
+
+footer {
+    color: #1c1c1c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+    background-color: #e5e5e5;
+    padding: 1em 0;
+}
+
+footer a {
+    color: #1c1c1c;
+    text-decoration: none;
+}
+
+.footer-item {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+/*
+    The pseudo-class is inline block by default, 
+    so the property width without effect.
+    todo...
+    使用 pseudo-class 的方式为什么做不到使用 img 的效果???
+*/
+/* .public-security-authorities::before {
+    content: url('https://mandong8.com/images/ic_small01.png');
+    display: inline-block;
+    width: 1.3em;
+    height: 1.3em;
+    margin-right: .5em;
+    background: url('https://mandong8.com/images/ic_small01.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+} */
+/* .public-security-authorities {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+} */
+
+.msg-box {
+    position: fixed;
+    width: 50vw;
+    height: 2em;
+    background: lightgray;
+    /* top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; */
+    /* margin: auto; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #1c1c1c;
+    font-size: 1.25rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5em;
+    /* animation: display-none 3s ease forwards; */
+}
+
+.weixin-open-tip-img {
+    position: fixed;
+    background: white;
+    min-height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    /* border: 1px solid red; */
+}
+
+.weixin-open-tip-img img {
+    width: 100%;
+}
+
+.display-none {
+    display: none;
+}
+
+@media (min-width: 900px) {
+    footer {
+        flex-direction: row;
+        padding: 2em 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-item:not(:last-child)::after {
+        content: '|';
+    }
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="md">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>download-page</title>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header>
+        <img src="https://mandong8.com/images/icon_logo06.png" alt="An app icon">
+        <div class="header-right">
+            <div class="header-right-up">
+                <h1 class="app-name">风风宝盒</h1>
+                <p class="subtitle">手办周边购物平台</p>
+            </div>
+            <button id="download-btn">下载</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- 评分 版本 大小 下载次数 -->
+        <section class="section-1" id="section-1">
+            <ul>
+                <!-- be rendered in js. -->
+            </ul>
+        </section>
+
+        <!-- 更新日志 -->
+        <section class="section-4">
+            <h2 class="title after-style-1" id="update-info">
+                新功能
+            </h2>
+            <div id="update-info-container">
+                <ul>
+                    <!-- be rendered in js. -->
+                </ul>
+            </div>
+        </section>
+
+        <!-- 产品介绍 -->
+        <!-- <section class="section-2">
+            <h2>预览</h2>
+            <ul>
+                <li>
+                    <img src="/content-imgs/content-show01.jpg" alt="content show-img 1">
+                </li>
+                <li>
+                    <img src="/content-imgs/content-show02.jpg" alt="content show-img 2">
+                </li>
+                <li>
+                    <img src="/content-imgs/content-show03.jpg" alt="content show-img 3">
+                </li>
+                <li>
+                    <img src="/content-imgs/content-show04.jpg" alt="content show-img 4">
+                </li>
+            </ul>
+        </section> -->
+
+        <!-- 产品文字介绍 section 3 -->
+        <section class="section-3" id="section-3">
+            <h2>简介</h2>
+            <p class="text" id="detail-more-text"></p>
+            <button class="display-none" id="detail-more-btn">更多</button>
+        </section>
+
+        <!-- 评分以及评论 -->
+        <section class="section-5">
+            <h2 class="header">评分以及评论</h2>
+            <div class="rate-avg-container" id="rate-avg-container">
+                <p class="rate-avg">4.2</p>
+                <div>
+                    <p class="rate-avg-icon">☆☆☆☆☆</p>
+                    <p class="rate-total">780万个评分</p>
+                </div>
+            </div>
+            <p class="best-help-rate">
+                最有帮助的评论
+            </p>
+            <ul>
+                <!-- be rendered in js. -->
+            </ul>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <a class="footer-item" href="https://beian.miit.gov.cn/#/Integrated/index"
+            target="_blank">幔动科技：湘ICP备2022018997号-1</a>
+        <p class="footer-item public-security-authorities">
+            <img src="https://mandong8.com/images/ic_small01.png" alt="">
+            湘公网安备 000000000000号
+        </p>
+        <p class="footer-item">长沙幔动网络科技有限公司版权所有</p>
+    </footer>
+
+    <!-- pop up -->
+    <div class="msg-box display-none" id="msg-box">请在浏览器中打开
+    </div>
+
+    <div class="weixin-open-tip-img display-none" id="weixin-open-tip-img">
+        <img src="/weixin-tip-img.jpeg" alt="A mark">
+    </div>
+
+    <script type="module" src="index.js"></script>
+</body>
+
+</html>
