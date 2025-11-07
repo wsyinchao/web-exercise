@@ -419,19 +419,19 @@ footer a {
     /* animation: display-none 3s ease forwards; */
 }
 
-.weixin-open-tip-img {
+.weixin-open-tip-img-container {
     position: fixed;
     background: white;
     min-height: 100vh;
-    width: 100%;
+    /* It's default value */
+    /* width: 100%; */
     top: 0;
     left: 0;
-    width: 100vw;
-    /* border: 1px solid red; */
 }
 
-.weixin-open-tip-img img {
+.weixin-open-tip-img-container img {
     width: 100%;
+    border: 1px solid red;
 }
 
 .display-none {

@@ -54,6 +54,14 @@ function translateMetadata() {
 }
 // console.log(translateMetadata())
 
+/**
+ * In the DOM event module, events bubbles up from the target element
+ * to its ancestors until they reach the document root -- unless stopped 
+ * along the way.
+ * 
+ * Additional, If you want to know whether the click happened directly
+ * on the parent or one of its children, you can check `event.target === event.currentTarget`.
+ */
 document.addEventListener('click', e => {
     if (e.target.id === 'detail-more-btn') {
         handleDetailMore(e.target)
@@ -61,15 +69,17 @@ document.addEventListener('click', e => {
         handleDownload(e.target)
     } else if (e.target.id === 'update-info') {
         handleUpdateInfo(e.target)
-    } else if (e.target.id === 'weixin-open-tip-img') {
-        e.stopPropagation()
     }
 })
 
-document.addEventListener('touchmove', e => {
-    if (e.target.id === 'weixin-open-tip-img') {
-        e.stopPropagation()
-    }
+document.getElementById('weixin-open-tip-img-container').addEventListener('touchmove', e => {
+    e.preventDefault()
+    e.stopPropagation()
+})
+
+document.getElementById('weixin-open-tip-img-container').addEventListener('click', e => {
+    e.preventDefault()
+    e.stopPropagation()
 })
 
 function handleDetailMore(element) {
