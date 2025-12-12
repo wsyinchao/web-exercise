@@ -17,10 +17,11 @@ export async function serveStatic(req, res, baseDir) {
 
   try {
     const content = await fs.readFile(filePath)
+    // Read all the contents and then sendback to client with MIME(Multiple Internet Mail Extention)
     sendResponse(res, 200, contentType, content)
 
   } catch (err) {
-    if (err.code === 'ENOENT') { 
+    if (err.code === 'ENOENT') {
       const content = await fs.readFile(path.join(publicDir, '404.html'))
       sendResponse(res, 404, 'text/html', content)
     } else {
