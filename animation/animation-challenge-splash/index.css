@@ -1,0 +1,38 @@
+body {
+	margin: 0;
+}
+
+.image-wrapper {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background: url("main.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+	animation: splash 1.5s ease-out;
+	animation-fill-mode: forwards;
+}
+
+@keyframes splash {
+	from {width: 0; opacity: 0;}
+	to {width: 100vw; opacity: 1;}
+}
+
+.title {
+	font-size: 4em;
+	text-transform: uppercase;
+	margin: 0;
+	font-family: Sen;
+	text-align: center;
+	animation: textFadeIn 1s ease-out 2s;
+	animation-fill-mode: both;
+}
+
+@keyframes textFadeIn {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
