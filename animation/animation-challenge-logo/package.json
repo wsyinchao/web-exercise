@@ -1,0 +1,14 @@
+{
+  "name": "Scrim-s01uag3",
+  "description": "https://scrimba.com/learn-css-animations-c02g/~0l",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vite": "latest"
+  },
+  "devDependencies": {}
+}
