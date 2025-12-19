@@ -1,0 +1,12 @@
+{
+  "name": "hello-node",
+  "version": "1.0.0",
+  "description": "A project for learning and practice",
+  "license": "ISC",
+  "author": "Julian Yin",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

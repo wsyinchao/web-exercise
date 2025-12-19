@@ -10,10 +10,10 @@ function component() {
 
 document.body.appendChild(component());
 
-(function () {
-    const { dirname, filename, url, main } = import.meta
-    /**
-     * undefined, undefined, 'file:///D:/workspace/personal-website/webpack-quickstart/src/index.js', undefined.
-     */
-    console.log(dirname, filename, url, main)
-})()
+// (function () {
+//     const { dirname, filename, url, main } = import.meta
+//     /**
+//      * undefined, undefined, 'file:///D:/workspace/personal-website/webpack-quickstart/src/index.js', undefined.
+//      */
+//     console.log(dirname, filename, url, main)
+// })()

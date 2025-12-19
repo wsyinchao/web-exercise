@@ -44,6 +44,7 @@
 
     --poster-width: 99px;
     --poster-aspect-ratio-h2w: 147.41 / 99;
+    --post-height: calc(var(--poster-width) * var(--poster-aspect-ratio-h2w));
 
     color: var(--color);
     background-color: var(--bg-color);
@@ -214,7 +215,7 @@ li:last-child {
 
 .poster {
     width: var(--poster-width);
-    height: calc(var(--poster-width) * var(--poster-aspect-ratio-h2w));
+    height: var(--post-height);
 }
 
 .title-container {
@@ -241,6 +242,7 @@ li:last-child {
     display: flex;
     flex-direction: column;
     gap: 0.5em;
+    height: var(--post-height);
 }
 
 .detail {
@@ -291,6 +293,14 @@ li:last-child {
 
     /* If you have multiple lines, the truncation should be done in JavaScript. */
     /* Refer to the truncateText method in index.js file. */
+}
+
+.test-truncate-in-css {
+    height: 60%;
+    width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 footer {
