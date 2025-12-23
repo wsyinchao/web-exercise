@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --font-family: 'Karla', sans-serif;
+    --body-bg: #1E1F25;
+    --btn-bg: #000;
+    --btn-color: #cbcbcb;
+    --btn-color-hover: #fff;
+    --grad-color1: #eeaf61;
+    --grad-color2: #fb9062;
+    --grad-color3: #ee5d6c;
+    --grad-color4: #ce4993;
+    --grad-color5: #6a0d83;
+}
+
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    background-color: var(--body-bg);
+}
+
+.button-border {
+    margin: auto;
+    /* background: linear-gradient(45deg, blue, red); */
+    /* background: linear-gradient(in oklab, blue, red); */
+    /* background: linear-gradient(to left top, blue, red); */
+    /* background: linear-gradient(in hsl, blue, red); */
+    /* background: linear-gradient(0deg, blue, green 40%, red); */
+    /* background: linear-gradient(0.75turn, red, 10%, blue); */
+    background: linear-gradient(0.25turn, var(--grad-color1), var(--grad-color2), var(--grad-color3), var(--grad-color4));
+}
+
+.button {
+    font-size: 2rem;
+    padding: 1em 2em;
+    background-color: var(--btn-bg);
+    color: var(--btn-color);
+    border: none;
+    margin: .1em;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    font-family: 'Karla', sans-serif;
+}
+
+.button:hover {
+    color: var(--btn-color-hover);
+    padding: 1.1em 2.1em;
+}
+
+.button-border:hover {
+    background: linear-gradient(0.75turn, var(--grad-color1), var(--grad-color2), var(--grad-color3), var(--grad-color4));
+}
