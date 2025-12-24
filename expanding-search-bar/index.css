@@ -1,0 +1,49 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --search-border: #bbb;
+    --search-focus-border: #3a71ca;
+}
+
+
+.container {
+    box-sizing: border-box;
+    margin: 2em;
+    font-size: 2rem;
+}
+
+.search-bar {
+    font-size: inherit;
+    padding: .25em .5em;
+    width: 30%;
+    outline-color: var(--search-border);
+    transition: all .5s ease-out;
+}
+
+.search-bar:focus {
+    width: 100%;
+    outline-color: var(--search-focus-border);
+}
+
+.search-bar::placeholder {
+    opacity: 1;
+    transition: all .5s ease-out;
+}
+
+.search-bar:focus::placeholder {
+    opacity: 0;
+}
+
+.label-div {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin-left: -1px;
+    border: none;
+    position: absolute;
+}
