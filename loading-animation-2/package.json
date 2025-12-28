@@ -1,0 +1,14 @@
+{
+  "name": "Scrim-s051iq0",
+  "description": "https://scrimba.com/css-challenges-c02p/~0b",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vite": "latest"
+  },
+  "devDependencies": {}
+}
