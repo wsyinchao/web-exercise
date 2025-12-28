@@ -33,7 +33,7 @@ body {
     /* background: conic-gradient(var(--spinner-active) 90deg, var(--spinner) 90deg); */
     /* It's more beautiful */
     background: conic-gradient(var(--spinner), var(--spinner-active));
-    animation: loading-rotating 1.5s linear infinite;
+    animation: loading-rotating 1.3s linear infinite;
 }
 
 .cover {
