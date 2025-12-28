@@ -1,0 +1,50 @@
+body,
+html {
+    margin: 0;
+}
+
+:root {
+    --spinner: #f3f3f3;
+    --spinner-active: purple;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container,
+.loader {
+    width: 15em;
+    height: 15em;
+    background-color: var(--spinner);
+    border-radius: 50%;
+}
+
+.loader {
+    /* background-color: var(--spinner-active); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* background: conic-gradient(var(--spinner-active) 90deg, var(--spinner) 90deg); */
+    /* It's more beautiful */
+    background: conic-gradient(var(--spinner), var(--spinner-active));
+    animation: loading-rotating 1.5s linear infinite;
+}
+
+.cover {
+    width: 12em;
+    height: 12em;
+    background-color: white;
+    border-radius: 50%;
+}
+
+@keyframes loading-rotating {
+    to {
+        transform: rotate(360deg);
+    }
+}
