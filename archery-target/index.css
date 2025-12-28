@@ -1,0 +1,54 @@
+:root {
+    --black: #282828;
+    --blue: #2892f9;
+    --red: #fb2f27;
+    --yellow: #fdfe29;
+}
+
+html,
+body {
+    margin: 0;
+}
+
+.rings {
+    height: 90vw;
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.ring {
+    border-radius: 50%;
+}
+
+.ring-1,
+.ring-2,
+.ring-3,
+.bullseye {
+    height: 80vw;
+    width: 80vw;
+    background-color: var(--black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ring-2 {
+    height: 60vw;
+    width: 60vw;
+    background-color: var(--blue);
+}
+
+.ring-3 {
+    height: 40vw;
+    width: 40vw;
+    background-color: var(--red);
+}
+
+.bullseye {
+    height: 20vw;
+    width: 20vw;
+    background-color: var(--yellow);
+}
