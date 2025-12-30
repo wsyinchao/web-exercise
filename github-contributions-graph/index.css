@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0d1116;
+}
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --graph-bg: #000;
+    --default-square-bg: #161b22;
+    --level3: darkblue;
+    --level5: blue;
+    --level10: lightskyblue;
+}
+
+.graph-container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.square {
+    aspect-ratio: 1/1;
+    width: 0.952vw;
+    background-color: var(--default-square-bg);
+}
+
+/* Attribute selectors */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors */
+ul[class|=week] {
+    display: flex;
+    flex-direction: column;
+    gap: .952vw;
+}
+
+/* .graph {
+    display: grid;
+    grid-template-columns: repeat(52, 1fr);
+    gap: 0.952vw;
+    padding: 0 .952vw;
+} */
+/* more lovely  */
+.graph {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--graph-bg);
+}
+
+li[data-value="3"] {
+    background-color: var(--level3);
+}
+
+li[data-value="5"] {
+    background-color: var(--level5);
+}
+
+li[data-value="10"] {
+    background-color: var(--level10);
+}
