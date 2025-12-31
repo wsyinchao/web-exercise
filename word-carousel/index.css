@@ -1,0 +1,49 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg-word: #5134ff;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.container h1 {
+    font-size: 5rem;
+    position: relative;
+    margin: 0;
+}
+
+.container h1::after {
+    background-color: var(--bg-word);
+    content: 'Cats';
+    position: absolute;
+    /* padding: .3em; */
+    color: white;
+    border-radius: .1em;
+    animation: word-carousel 4s linear infinite;
+    margin-left: .2em;
+    padding: .1em .3em;
+    top: -.05em;
+}
+
+@keyframes word-carousel {
+    25% {
+        content: 'Dogs';
+    }
+
+    50% {
+        content: 'JavaScript';
+    }
+
+    75% {
+        content: 'CSS';
+    }
+}
