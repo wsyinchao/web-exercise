@@ -1,0 +1,50 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --card-height: 300px;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    aspect-ratio: 2 / 3;
+    width: var(--card-height);
+    border: 3px solid black;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    padding: .2em;
+    font-size: 3rem;
+    color: red;
+}
+
+.left {
+    align-items: flex-start;
+}
+
+.middle {
+    align-self: center;
+    font-size: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.3em;
+}
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:nth-child */
+.middle>div:nth-child(n + 3) {
+    transform: rotate(180deg);
+}
+
+.right {
+    align-self: flex-end;
+    transform: rotate(180deg);
+}
