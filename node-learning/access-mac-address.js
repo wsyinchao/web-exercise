@@ -1,0 +1,3 @@
+import { networkInterfaces } from "node:os";
+
+console.log(networkInterfaces())
