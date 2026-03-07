@@ -40,7 +40,7 @@ onMounted(() => {
         <label for="checkbox-water">water</label>
         <input type="checkbox" id="checkbox-ancohol" v-model="checkedList" value="ancohol">
         <label for="checkbox-ancohol">ancohol</label>
-        <p v-if="checkedList.length">Checked items: [{{ checkedList.join(', ') }}]</p>
+        <p v-if="checkedList.length">Checked items: [{{ checkedList.join(',') }}]</p>
         <p v-else>No item was selected.</p>
 
         <!-- radio -->
@@ -62,7 +62,7 @@ onMounted(() => {
             <option value="C">C</option>
         </select>
         <p v-if="selected">Selected value is: {{ selected }}</p>
-        <p v-else>Haven't selected.</p>[
+        <p v-else>Haven't selected.</p>
 
         <!-- Multiple Select -->
         <hr />
@@ -73,7 +73,7 @@ onMounted(() => {
             <option value="B">B</option>
             <option value="C">C</option>
         </select>
-        <p v-if="selectedMultiple.length">Selected values are: {{ selectedMultiple.join(', ') }}]</p>
+        <p v-if="selectedMultiple.length">Selected values are: [{{ selectedMultiple.join(',') }}]</p>
         <p v-else>Haven't selected.</p>
     </div>
 </template>
