@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { marked } from "marked"
 import { debounce } from "lodash"
-import { computed, onMounted, ref, useTemplateRef } from "vue";
+import { computed, onMounted, ref, useTemplateRef } from "vue"
 
 const textareaElement = useTemplateRef("textarea")
 const input = ref("")
@@ -14,14 +14,18 @@ const update = debounce((e: InputEvent) => {
 
 onMounted(() => {
     textareaElement.value?.focus()
-});
+})
 </script>
 
 <template>
     <div class="container">
         <div class="editor">
             <h1>Markdown Editor</h1>
-            <textarea ref="textarea" @input="update" placeholder="Enter your contents here..."></textarea>
+            <textarea
+                ref="textarea"
+                @input="update"
+                placeholder="Enter your contents here..."
+            ></textarea>
         </div>
 
         <div class="preview">
@@ -43,7 +47,7 @@ h1 {
 .container {
     display: flex;
     height: 100vh;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
     font-size: 1.25rem;
 }
 
