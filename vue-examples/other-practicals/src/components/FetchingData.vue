@@ -90,6 +90,7 @@ function formatDate(v: string) {
 .root {
     padding: 1em;
     font-weight: bold;
+    font-size: 1.25rem;
 }
 
 h1 {
