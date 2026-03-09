@@ -3,7 +3,7 @@ import { marked } from "marked"
 import { debounce } from "lodash"
 import { computed, onMounted, ref, useTemplateRef } from "vue"
 
-const textarea = useTemplateRef<HTMLTextAreaElement>("textarea")
+const textarea = useTemplateRef("textarea")
 const input = ref("")
 
 const output = computed(() => {
@@ -24,10 +24,9 @@ onMounted(() => {
         <div class="editor">
             <h2>edit</h2>
             <textarea
-                class="input"
+                ref="textarea"
                 :value="input"
                 @input="update"
-                ref="textarea"
                 placeholder="Type your content here..."
             ></textarea>
         </div>
