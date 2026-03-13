@@ -5,7 +5,7 @@ import MarkdownMimic from './components/MarkdownMimic.vue'
 import ModalComponent from './components/ModalComponent.vue'
 import FetchingData from './components/FetchingData.vue'
 import ListTransition from './components/ListTransition.vue'
-// import TransitionGroupComponent from './components/TransitionGroupComponent.vue'
+import TransitionGroupComponent from './components/TransitionGroupComponent.vue'
 </script>
 
 <template>
@@ -15,7 +15,7 @@ import ListTransition from './components/ListTransition.vue'
 
     <!-- <FetchingData /> -->
 
-    <ListTransition />
+    <!-- <ListTransition /> -->
 
     <TransitionGroupComponent />
 </template>
