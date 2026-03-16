@@ -1,0 +1,16 @@
+{
+  "name": "jwt",
+  "version": "1.0.0",
+  "description": "learning jwt ",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node index.js"
+  },
+  "dependencies": {
+    "jsonwebtoken": "^9.0.3"
+  }
+}
