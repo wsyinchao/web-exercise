@@ -82,4 +82,12 @@ li {
     opacity: 0;
     transform: scale(0.01) translateY(30px);
 }
+
+/*
+ * Ensure leaving elements are taken out
+ * of layout so that moving animations can be calculated correctly.
+ */
+.list-leave-active {
+    position: absolute;
+}
 </style>
