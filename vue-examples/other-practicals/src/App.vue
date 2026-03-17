@@ -6,6 +6,7 @@ import ModalComponent from './components/ModalComponent.vue'
 import FetchingData from './components/FetchingData.vue'
 import ListTransition from './components/ListTransition.vue'
 import TransitionGroupComponent from './components/TransitionGroupComponent.vue'
+import KeepAliveComponent from './components/KeepAliveComponent.vue'
 </script>
 
 <template>
@@ -17,7 +18,9 @@ import TransitionGroupComponent from './components/TransitionGroupComponent.vue'
 
     <!-- <ListTransition /> -->
 
-    <TransitionGroupComponent />
+    <!-- <TransitionGroupComponent /> -->
+
+    <KeepAliveComponent />
 </template>
 
 <style scoped></style>
