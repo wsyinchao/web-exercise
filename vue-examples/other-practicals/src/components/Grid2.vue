@@ -73,12 +73,12 @@ const filteredData = computed(() => {
             </tr>
         </thead>
 
-        <tbody>
+        <TransitionGroup tag="tbody" name="fade">
             <tr v-for="hero in filteredData" :key="hero.name">
                 <td>{{ capitalize(hero.name) }}</td>
                 <td>{{ hero.power }}</td>
             </tr>
-        </tbody>
+        </TransitionGroup>
     </table>
 </template>
 
@@ -135,5 +135,22 @@ th.active .arrow {
     border-left: 4px solid transparent;
     border-right: 4px solid transparent;
     border-top: 4px solid #fff;
+}
+
+/* Transition styles */
+.fade-move,
+.fade-enter-active,
+.fade-leave-active {
+    transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+}
+
+/* .fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+    transform: scale(0.01) translateY(30px);
+} */
+
+.fade-leave-active {
+    position: absolute;
 }
 </style>
