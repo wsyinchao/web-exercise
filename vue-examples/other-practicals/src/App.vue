@@ -7,6 +7,8 @@ import FetchingData from './components/FetchingData.vue'
 import ListTransition from './components/ListTransition.vue'
 import TransitionGroupComponent from './components/TransitionGroupComponent.vue'
 import KeepAliveComponent from './components/KeepAliveComponent.vue'
+import GridComponent from './components/GridComponent.vue'
+import GridComponent2 from './components/GridComponent2.vue'
 </script>
 
 <template>
@@ -20,7 +22,11 @@ import KeepAliveComponent from './components/KeepAliveComponent.vue'
 
     <!-- <TransitionGroupComponent /> -->
 
-    <KeepAliveComponent />
+    <!-- <KeepAliveComponent /> -->
+
+    <!-- <GridComponent /> -->
+
+    <GridComponent2 />
 </template>
 
 <style scoped></style>
