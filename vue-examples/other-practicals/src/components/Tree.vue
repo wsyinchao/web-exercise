@@ -52,7 +52,7 @@ function addChildren() {
                 :data="child"
             />
             <li class="bold" @click="addChild()">+</li>
-            <li class="bold" @click="addChildren()">+++</li>
+            <li class="bold" @click.alt="addChildren()">ALT+</li>
         </ul>
     </li>
 </template>
