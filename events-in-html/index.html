@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="md">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Events in HTML</title>
+    </head>
+    <body>
+        <h1>Events in HTML</h1>
+
+        <script>
+            // document.body.addEventListener('keyup', (e) => {
+            //     e.stopPropagation()
+            //     console.log('Key up event:', e)
+            // })
+
+            // document.body.addEventListener('keydown', (e) => {
+            //     e.stopPropagation()
+            //     console.log('Key down event:', e)
+            // })
+
+            document.body.addEventListener('click', (e) => {
+                e.stopPropagation()
+                if (e.altKey) {
+                    console.log('ALT + click event:', e)
+                } else {
+                    console.log('Click event:', e)
+                }
+            })
+        </script>
+    </body>
+</html>
