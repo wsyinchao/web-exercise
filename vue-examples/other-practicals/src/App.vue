@@ -9,6 +9,7 @@ import TransitionGroupComponent from './components/TransitionGroupComponent.vue'
 import KeepAliveComponent from './components/KeepAliveComponent.vue'
 import GridComponent from './components/GridComponent.vue'
 import GridComponent2 from './components/GridComponent2.vue'
+import TreeComponent from './components/TreeComponent.vue'
 </script>
 
 <template>
@@ -26,7 +27,9 @@ import GridComponent2 from './components/GridComponent2.vue'
 
     <!-- <GridComponent /> -->
 
-    <GridComponent2 />
+    <!-- <GridComponent2 /> -->
+
+    <TreeComponent />
 </template>
 
 <style scoped></style>
