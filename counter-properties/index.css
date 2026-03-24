@@ -1,0 +1,19 @@
+body {
+    font-size: 2rem;
+}
+
+.counter {
+    counter-reset: my-counter 0;
+    animation: count 2s steps(100) forwards;
+}
+
+.counter::after {
+    content: counter(my-counter);
+}
+
+/* can't be work because of counter-increment is not animatable */
+@keyframes count {
+    to {
+        counter-increment: my-counter 100;
+    }
+}
