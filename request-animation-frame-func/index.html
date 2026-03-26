@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="md">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>request animation frame func</title>
+
+        <style>
+            body {
+                font-family: sans-serif;
+                padding: 1rem;
+            }
+
+            #number {
+                font-size: 2rem;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Number Scroll Animation</h3>
+        <p id="number">0</p>
+
+        <script>
+            const numberElement = document.getElementById('number')
+
+            // function loop(currentTimeStamp) {
+            //     console.log('Looping...', currentTimeStamp)
+            // }
+
+            // requestAnimationFrame(loop)
+
+            function tweenNumber(start, end, duration, callback) {
+                const startTime = performance.now()
+
+                function animate(currentTime) {
+                    const eplapsedTime = currentTime - startTime
+                    const progress = Math.min(eplapsedTime / duration, 1)
+                    const currentValue = start + (end - start) * progress
+
+                    // console.log(Math.floor(currentValue))
+                    callback(currentValue)
+
+                    if (progress < 1) {
+                        requestAnimationFrame(animate)
+                    } else {
+                        callback(end)
+                    }
+                }
+
+                requestAnimationFrame(animate)
+            }
+
+            tweenNumber(0, 100, 1000, (value) => {
+                numberElement.textContent = Math.floor(value)
+            })
+        </script>
+    </body>
+</html>
