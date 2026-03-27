@@ -10,6 +10,12 @@ import KeepAliveComponent from './components/KeepAliveComponent.vue'
 import GridComponent from './components/GridComponent.vue'
 import GridComponent2 from './components/GridComponent2.vue'
 import TreeComponent from './components/TreeComponent.vue'
+
+// It worked as expected
+// import { showMsgBox } from './utilities/showMsgBox'
+// setTimeout(() => {
+//     showMsgBox('Hello, this is a message!')
+// }, 1000)
 </script>
 
 <template>
