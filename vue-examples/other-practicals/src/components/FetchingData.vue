@@ -49,9 +49,6 @@ function formatDate(v: string) {
             <div class="branch-radio" v-for="branch in branches">
                 <!-- 
                 -- About the v-bind and v-model working together:
-                -- 
-                -- When the value of v-bind:value is equal to the value of v-model,
-                -- the radio button will be selected.
                 -->
                 <input
                     type="radio"
