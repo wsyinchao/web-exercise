@@ -31,7 +31,8 @@ function genPassword() {
 
     const key2Result = []
     key2.reduce((resultArr, value) => {
-        resultArr.push(value.toString(16).padStart(2, '0'))
+        // The radix argument of toString() can be between 2 and 36.
+        resultArr.push(value.toString(36))
         return resultArr
     }, key2Result)
 
