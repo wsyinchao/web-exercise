@@ -12,6 +12,8 @@ import GridComponent2 from './components/GridComponent2.vue'
 import TreeComponent from './components/TreeComponent.vue'
 import Animation from './components/Animation.vue'
 import Animation2 from './components/Animation2.vue'
+import CellComponent from './components/cells/CellComponent.vue'
+import CellComponent2 from './components/cells2/CellComponent.vue'
 
 // It worked as expected
 // import { showMsgBox } from './utilities/showMsgBox'
@@ -39,7 +41,11 @@ import Animation2 from './components/Animation2.vue'
 
     <!-- <TreeComponent /> -->
 
-    <Animation />
+    <!-- <Animation /> -->
+
+    <!-- <CellComponent /> -->
+
+    <CellComponent2 />
 </template>
 
 <style scoped></style>
