@@ -14,6 +14,7 @@ import Animation from './components/Animation.vue'
 import Animation2 from './components/Animation2.vue'
 import CellComponent from './components/cells/CellComponent.vue'
 import CellComponent2 from './components/cells2/CellComponent.vue'
+import Timer from './components/Timer.vue'
 
 // It worked as expected
 // import { showMsgBox } from './utilities/showMsgBox'
@@ -45,7 +46,9 @@ import CellComponent2 from './components/cells2/CellComponent.vue'
 
     <!-- <CellComponent /> -->
 
-    <CellComponent2 />
+    <!-- <CellComponent2 /> -->
+
+    <Timer />
 </template>
 
 <style scoped></style>
