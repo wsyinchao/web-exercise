@@ -19,8 +19,9 @@ watchEffect(() => {
             cancelAnimationFrame(animationFrameId)
         }
 
-        const updateProgress = () => {
-            const elapsedTime = (performance.now() - startTime) / 1000
+        const updateProgress = (currentTime: number) => {
+            // const elapsedTime = (performance.now() - startTime) / 1000
+            const elapsedTime = (currentTime - startTime) / 1000
             progressRatio.value = Math.min(elapsedTime / duration.value, 1)
 
             if (elapsedTime < duration.value) {
