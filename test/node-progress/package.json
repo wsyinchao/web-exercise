@@ -1,0 +1,16 @@
+{
+  "name": "node-progress",
+  "version": "1.0.0",
+  "description": "How can you ouput a progress in a terminal",
+  "keywords": [
+    "terminal",
+    "progress"
+  ],
+  "license": "ISC",
+  "author": "Julian Yin",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  }
+}
