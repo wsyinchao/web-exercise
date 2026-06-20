@@ -1,0 +1,15 @@
+{
+  "name": "chalk-module",
+  "version": "1.0.0",
+  "description": "travel on how to use this module ",
+  "license": "ISC",
+  "author": "Julian Yin",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "dependencies": {
+    "chalk": "^5.6.2"
+  }
+}
