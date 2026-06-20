@@ -25,6 +25,8 @@ export function datetimeFormat(date = new Date()) {
 }
 
 // A very simple way to output a time string in ISO-like format.
+// This method is in implementations with Intl.DateTimeFormat API support, 
+// it's delegates to that API.
 console.log(new Date().toLocaleString('sv-SE'), ", A more simple way to display a time in ISO-like format")
 console.log(new Date().toLocaleString('sv-SE', {
     second: "numeric"
