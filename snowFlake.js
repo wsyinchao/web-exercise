@@ -4,14 +4,14 @@
 class SnowFlake {
     constructor({ workId = 1, clusterId = 1, epoch = 1735689600000 } = {}) {
         // this.signBits = 1
-        this.timeInMillisecondsBits = 41
+        this.timeInMillisecondsBits = 41    // The max time in milliseconds is 2^41 - 1, which is about 69 years
         this.workIdBits = 5
         this.clusterIdBits = 5
-        this.sequenceBits = 12
+        this.sequenceBits = 12              // The max sequence is 2^12 - 1, which is 4095
 
-        this.maxWorkId = (1 << this.workIdBits) - 1
-        this.maxclusterId = (1 << this.clusterIdBits) - 1
-        this.maxSequence = (1 << this.sequenceBits) - 1
+        this.maxWorkId = (1 << this.workIdBits) - 1         // 31
+        this.maxclusterId = (1 << this.clusterIdBits) - 1   // 31
+        this.maxSequence = (1 << this.sequenceBits) - 1     // 4095
 
         if (workId < 1 || workId > this.maxWorkId) {
             throw new Error(`WorkId must between 1n and ${this.maxWorkId}`)
