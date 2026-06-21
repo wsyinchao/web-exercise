@@ -49,9 +49,7 @@ _这是 Mifflin–St Jeor Equation, 其中的 5 是根据大量样本, 得到的
 
 ## 大卡与千焦单位转换
 
-1cal = 4184J;
-
-1kcal = 1000cal;
+1kcal = 4184J;
 
 ## 计划
 
