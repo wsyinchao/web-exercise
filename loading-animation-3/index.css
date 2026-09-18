@@ -30,6 +30,8 @@ body {
     justify-content: center;
     align-items: center;
 
+    /* background: radial-gradient(var(--spinner), var(--spinner-active)); */
+    /* background: linear-gradient(var(--spinner), var(--spinner-active)); */
     /* background: conic-gradient(var(--spinner-active) 90deg, var(--spinner) 90deg); */
     /* It's more beautiful */
     background: conic-gradient(var(--spinner), var(--spinner-active));
